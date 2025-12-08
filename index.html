@@ -4,15 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> Robert Poore Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
     <header>
-        <h1> Robert - Game Developer</h1>
+        <h1> Robert Poore - Game Developer</h1>
         <nav>
-            <a href="#projects">Projects</a>
-            <a href="#about"> About</a>
-            <a href="#Contact">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="about.html"> About</a>
+            <a href="contact.html">Contact</a>
+            <a href="projects.html">Projects</a>
+            <a href="games.html">Games</a>
         </nav>
     </header>
 
@@ -21,10 +23,20 @@
         <p>Welcome to my portfolio website.</p>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <!--projects go here-->
+    <section>
+        <h2>Featured Game</h2>
+        <div class="project-card">
+            <video autoplay muted loop playsinline>
+                <source src="assets/videos/moms-kitchen-demo.mp4" type="video/mp4">
+            </video>
+            <h3>Mom's Kitchen</h3>
+            <p>Cooking & production management game built in Unreal Engine 5.6.
+                Currently in development.
+            </p>
+
+            <a class="button" href="games/momskitchen.html">
+                View Project ->
+            </a>
         </div>
     </section>
 
