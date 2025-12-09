@@ -5,7 +5,12 @@
     <link rel="stylesheet" href="../styles/main.css?v=4">
 </head>
 
-<main class=""project-page>
+<main class="project-page">
+
+<a href="../games.html" class="back-link">
+        ← Back to Games
+    </a>
+
     <section class="project-hero">
 
         <h1> Mom's Kitchen</h1>
@@ -23,20 +28,60 @@
 <section class="project-section">
     <h2>Overview</h2>
     <p>
-       Mom’s Kitchen is a cooking and shop-management game built in Unreal Engine 5.6
-        using a C++-first gameplay architecture. The project focuses on modular systems,
-        clean class hierarchies, and scalable production workflows.
+        Mom’s Kitchen is a single-player cooking and shop-management game currently in active
+        development, built in Unreal Engine 5.6 with a C++-first architecture. The goal of the
+        project is to create a flexible, system-driven simulation where players can grow a
+        small kitchen into a fully customizable production space through cooking, gardening,
+        crafting, and customer service mechanics.
+    </p>
+
+    <p>
+        The project is designed with scalability in mind, focusing on clean class hierarchies,
+        modular gameplay systems, and data-driven design that allows new content and mechanics
+        to be added without refactoring existing systems. While Blueprints are used for UI
+        and rapid iteration, all core gameplay logic is implemented in C++.
     </p>
 </section>
 
 <section class="project-section"> 
-<h2>Core Systems</h2>
-<u1>
-    <li>Inventory & Stackable Items</li>
-    <li>Workstation Base Class Architecture</li>
-    <li>Interactable System Using Interfaces</li>
-    <li>Gardening and Production Chain Gameplay Loop</li>
-</u1>
+<h2>Core Systems & Architecture</h2>
+    <ul>
+        <li>
+            <strong>Inventory System:</strong> A fully C++-driven inventory supporting stackable
+            items, quality tiers, and extensible item data for future crafting and production.
+        </li>
+        <li>
+            <strong>Interactable Framework:</strong> A reusable interaction system built using
+            interfaces, allowing tools, stations, and world objects to respond consistently
+            to player input.
+        </li>
+        <li>
+            <strong>Workstation Architecture:</strong> A base workstation class that serves as
+            the foundation for specialized stations such as brewing, chopping, cooking, and
+            crafting, enabling shared logic with station-specific behavior.
+        </li>
+        <li>
+            <strong>Gardening & Production Loop:</strong> A complete seed-to-harvest pipeline
+            where players plant crops, manage growth, harvest produce, and route materials
+            into downstream cooking or crafting systems.
+        </li>
+    </ul>
+</section>
+
+<section class="project-section">
+    <h2>My Role</h2>
+    <p>
+        This project is a solo development effort. I was responsible for all core gameplay
+        programming, system architecture, and technical design decisions. This includes
+        defining class hierarchies, implementing gameplay systems in C++, and maintaining
+        clean separation between gameplay logic and UI.
+    </p>
+
+    <p>
+        A strong emphasis was placed on writing reusable, maintainable code that could support
+        long-term development, frequent iteration, and future expansion without introducing
+        technical debt.
+    </p>
 </section>
 
 <section class="project-section">
