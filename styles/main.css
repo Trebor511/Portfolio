@@ -29,20 +29,22 @@
 }
 
 .project-section {
-    margin-bottom: 48px;
+    margin-bottom: 28px;
 }
 
 .project-section h2 {
     font-size: 1.6rem;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .project-section ul {
     padding-left: 20px;
+    margin-bottom: 12px;
 }
 
 .project-section li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    line-height: 1.5;
     color: #d0d0db;
 }
 
