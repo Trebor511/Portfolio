@@ -1,0 +1,88 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conway’s Game of Life | Robert Poore</title>
+    <link rel="stylesheet" href="../styles/main.css?v=4">
+</head>
+
+<main class="project-page">
+
+    <a href="../projects.html" class="back-link">
+        ← Back to Projects
+    </a>
+
+    <section class="project-hero">
+
+        <h1>Conway’s Game of Life</h1>
+
+        <p class="project-subtitle">
+            .NET Application • C# • Cellular Automata • UI/UX Systems
+        </p>
+
+        <div class="video-embed">
+            
+            <video class ="project-video" controls autoplay muted loop>
+            <source src="../assets/videos/GameOfLife.mp4" type="video/mp4">
+        </video>
+        </div>
+
+    </section>
+
+    <section class="project-section">
+        <h2>Overview</h2>
+        <p>
+            My implementation of <strong>Conway’s Game of Life</strong> was developed as part of
+            Full Sail University’s Data Structures & Algorithms curriculum. The project required
+            building a fully interactive .NET Windows Forms application capable of simulating
+            Conway’s classic cellular automaton while providing a robust suite of user controls,
+            configuration options, and persistent settings.
+        </p>
+
+        <p>
+            The final submission includes all required basic features, all advanced features, 
+            and a polished UI/UX that emphasizes clarity, responsiveness, and ease of use.
+        </p>
+    </section>
+
+    <section class="project-section">
+        <h2>Basic Features</h2>
+        <ul>
+            <li><strong>Interactive Grid Rendering:</strong> Users can toggle cells alive or dead by clicking.</li>
+            <li><strong>Simulation Controls:</strong> Start, Pause, and Step (Next) generation controls via menu items and toolbar buttons.</li>
+            <li><strong>Randomization:</strong> Universe can be randomly populated using a user-defined seed or time-based logic.</li>
+            <li><strong>Clearing the Grid:</strong> A New/Clear option removes all living cells.</li>
+            <li><strong>Saving & Loading:</strong> Universe can be stored in a text file and reloaded, including universe size.</li>
+            <li><strong>Status Bar:</strong> Displays current generation count and number of living cells.</li>
+            <li><strong>Adjustable Timer:</strong> User can configure milliseconds between generations.</li>
+            <li><strong>Configurable Universe Size:</strong> Universe dimensions editable through a modal dialog.</li>
+            <li><strong>Neighbor Count Display:</strong> Toggleable numeric display for each cell’s neighbor count.</li>
+            <li><strong>Full View Menu:</strong> Toggles gridlines, neighbor counts, universe type, and HUD visibility.</li>
+        </ul>
+    </section>
+
+    <section class="project-section">
+        <h2>Advanced Features</h2>
+        <ul>
+            <li><strong>Customizable Colors:</strong> Users can choose grid, living cell, and background colors via modal dialogs.</li>
+            <li><strong>Boundary Behavior:</strong> Supports both finite and toroidal (wrapping) universe types.</li>
+            <li><strong>HUD Overlay:</strong> Displays universe size, generation, living cells, and boundary type.</li>
+            <li><strong>Persistent Settings:</strong> All adjustable settings (size, speed, colors) persist across sessions.</li>
+            <li><strong>Reset & Reload:</strong> Users can revert to default settings or reload previously saved preferences.</li>
+        </ul>
+    </section>
+
+    <section class="project-section">
+        <h2>Implementation Notes</h2>
+        <p>
+            This project involved extensive use of object-oriented principles, event-driven programming,
+            file I/O, timer management, and UI state synchronization. The persistent settings system 
+            required building a custom serialization workflow to ensure user configuration remained intact
+            between launches.
+        </p>
+        <p>
+            The completed application demonstrates strong fundamentals in .NET development, UI architecture,
+            state management, and algorithmic logic through a fully realized simulation tool.
+        </p>
+    </section>
+
+</main>
