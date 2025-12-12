@@ -1,0 +1,105 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendering Level | Robert Poore</title>
+    <link rel="stylesheet" href="../styles/main.css?v=4">
+</head>
+
+<main class="project-page">
+
+    <a href="../projects.html" class="back-link">
+        ← Back to Projects
+    </a>
+
+    <section class="project-hero">
+
+        <h1>Level Renderer</h1>
+
+        <p class="project-subtitle">
+            C++ • Gateware • Blender Pipeline • 3D Rendering Systems
+        </p>
+
+        <video class="project-video" controls muted loop>
+            <source src="../assets/videos/LevelRenderer.mp4" type="video/mp4">
+        </video>
+
+    </section>
+
+    <section class="project-section">
+        <h2>Overview</h2>
+        <p>
+            This <strong>Level Renderer</strong> is a C++ graphics programming project built as an extension
+            of my Rotating Cube renderer. The goal was to evolve the renderer into a fully functional 
+            <strong>real-time level loader</strong> capable of importing custom scene data, reading object 
+            transforms, and rendering multiple 3D models efficiently.
+        </p>
+
+        <p>
+            The system uses a <strong>custom text-based level description format</strong>, allowing objects to be positioned,
+            rotated, and loaded dynamically at runtime. Levels were designed in Blender, then exported through a 
+            purpose-built script that extracted transform data, enabling accurate scene reconstruction inside the engine.
+        </p>
+    </section>
+
+    <section class="project-section">
+        <h2>Core Features</h2>
+        <ul>
+            <li>
+                <strong>Custom Level File Parser:</strong> Reads model filenames, positional data, and orientation values 
+                from a text-based format to generate the level dynamically at runtime.
+            </li>
+
+            <li>
+                <strong>Model Loading with h2bParser:</strong> Integrated the <code>h2bParser</code> to load and manage 
+                mesh data from exported <code>.h2b</code> files, improving efficiency and runtime performance.
+            </li>
+
+            <li>
+                <strong>Blender-to-Engine Workflow:</strong> Designed levels directly inside Blender, exporting transform 
+                data to ensure accurate placement, rotation, and scaling inside the renderer.
+            </li>
+
+            <li>
+                <strong>Object-Oriented Architecture:</strong> Implemented a robust system for managing multiple models, 
+                improving readability and enabling scalable scene construction.
+            </li>
+
+            <li>
+                <strong>3D Transformations:</strong> Applied translation, rotation, and scaling matrices using Gateware’s 
+                math libraries to position objects correctly in world space.
+            </li>
+        </ul>
+    </section>
+
+    <section class="project-section">
+        <h2>Technical Breakdown</h2>
+        <p>
+            The renderer is built on top of <strong>Gateware</strong>, which provides low-level access to system 
+            hardware, math utilities, and windowing functionality. On top of this foundation, I implemented:
+        </p>
+
+        <ul>
+            <li>Scene generation through iterative parsing of level files</li>
+            <li>Matrix transformation pipelines for world, view, and projection spaces</li>
+            <li>A structured system for storing and rendering multiple mesh instances</li>
+            <li>Optimized batching and model management for real-time performance</li>
+        </ul>
+
+        <p>
+            This project significantly strengthened my understanding of <strong>graphics programming, file I/O, 
+            3D mathematics, engine architecture, and real-time rendering workflows</strong>.
+        </p>
+    </section>
+
+    <section class="project-section">
+        <h2>Project Links</h2>
+        <ul>
+            <li>
+                <a href="https://github.com/Trebor511/LevelRenderer-CodeDemo" target="_blank">
+                    GitHub Repository
+                </a>
+            </li>
+        </ul>
+    </section>
+
+</main>

@@ -1,0 +1,109 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concentrate! | Robert Poore</title>
+    <link rel="stylesheet" href="../styles/main.css?v=4">
+</head>
+
+<main class="project-page">
+
+    <a href="../projects.html" class="back-link">
+        ← Back to Projects
+    </a>
+
+    <section class="project-hero">
+
+        <h1>Concentrate!</h1>
+
+        <p class="project-subtitle">
+            Vulkan API • ECS Architecture • C++ • Custom Gameplay Systems
+        </p>
+
+        <video class="project-video" controls muted loop>
+            <source src="../assets/videos/ConcentrateDemo.mp4" type="video/mp4">
+        </video>
+
+    </section>
+
+    <section class="project-section">
+        <h2>Overview</h2>
+        <p>
+            <strong>Concentrate!</strong> is a retro arcade-style game inspired by the classic 
+            <em>Tapper!</em> and built entirely without a traditional game engine. Developed using the 
+            <strong>Vulkan graphics API</strong> and the <strong>FLECS Entity-Component-System (ECS) framework</strong>, 
+            this project focuses on low-level rendering, manual memory management, and custom gameplay architecture.
+        </p>
+
+        <p>
+            The game reimagines the original Tapper gameplay into a more family-friendly experience—replacing beer 
+            with orange juice—while maintaining the rapid, timing-based action of the arcade classic. Sprite 
+            rendering, input handling, physics behaviors, entity updates, and core game loop logic were all 
+            implemented from the ground up, providing a hands-on understanding of real-time rendering and ECS-driven 
+            gameplay.
+        </p>
+    </section>
+
+    <section class="project-section">
+        <h2>Technical Features</h2>
+        <ul>
+            <li>
+                <strong>Vulkan Rendering Pipeline:</strong> Implemented low-level rendering, swapchain setup, 
+                vertex buffers, texture sampling, and synchronization primitives.
+            </li>
+            <li>
+                <strong>FLECS ECS Architecture:</strong> Designed entities and components for players, drinks, 
+                patrons, and game systems, enabling efficient updates and behavior separation.
+            </li>
+            <li>
+                <strong>Custom Sprite System:</strong> Built a 2D sprite renderer on top of Vulkan's 
+                command-buffer architecture for fast and efficient rendering.
+            </li>
+            <li>
+                <strong>Game Logic & Input Handling:</strong> Implemented movement, drink-serving behavior, 
+                patron AI, scoring, and failure states from scratch.
+            </li>
+            <li>
+                <strong>Level Structure & Timing Systems:</strong> Built a complete gameplay loop including 
+                difficulty escalation, spawn timing, and resource management.
+            </li>
+        </ul>
+    </section>
+
+    <section class="project-section">
+        <h2>Development Notes</h2>
+        <p>
+            <strong>Concentrate!</strong> built directly on top of my previous <em>Level Renderer</em> project, 
+            extending the rendering foundation into a fully playable game. Working with Vulkan and FLECS provided 
+            a deep understanding of graphics pipelines, memory handling, and data-oriented architecture.
+        </p>
+
+        <p>
+            The project reinforced advanced skills in:
+        </p>
+
+        <ul>
+            <li>Low-level rendering APIs (Vulkan)</li>
+            <li>ECS-based engine architecture</li>
+            <li>Real-time update loops & performance optimization</li>
+            <li>Input systems & game mechanic scripting</li>
+            <li>Memory management and GPU/CPU synchronization</li>
+        </ul>
+
+        <p>
+            Together, these systems represent a complete custom-built game framework—with no Unity, Unreal, or 
+            traditional engine tools involved.
+        </p>
+    </section>
+
+    <section class="project-section">
+        <h2>Project Links</h2>
+        <ul>
+            <li>
+                <a href="https://github.com/Trebor511/Concentrate--CodeDemo" target="_blank">
+                    GitHub Repository
+                </a>
+            </li>
+        </ul>
+    </section>
+
+</main>

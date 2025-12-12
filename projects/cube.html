@@ -1,0 +1,95 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Cube | Robert Poore</title>
+    <link rel="stylesheet" href="../styles/main.css?v=4">
+</head>
+
+<main class="project-page">
+
+    <a href="../projects.html" class="back-link">
+        ← Back to Projects
+    </a>
+
+    <section class="project-hero">
+
+        <h1>Rotating Cube</h1>
+
+        <p class="project-subtitle">
+            C++ • Computer Graphics • Line Drawing Algorithms • Perspective Projection
+        </p>
+
+        <video class="project-video" controls muted loop>
+            <source src="../assets/videos/CrashCube.mp4" type="video/mp4">
+        </video>
+
+    </section>
+
+    <section class="project-section">
+        <h2>Overview</h2>
+        <p>
+            The <strong>Rotating Cube</strong> is a computer graphics project developed in C++
+            as part of Full Sail University’s graphics programming curriculum.
+            The assignment began with implementing foundational line-drawing algorithms and
+            gradually expanded into rendering a fully 3D cube, applying rotation
+            transformations, and projecting it into 2D space using perspective mathematics.
+        </p>
+
+        <p>
+            The final result is a smooth, real-time animated cube rendered with custom graphics logic.
+            No game engine required, only low-level math,
+            transformation matrices, and manual pixel plotting.
+        </p>
+    </section>
+
+    <section class="project-section">
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Line Drawing Algorithms:</strong> Implemented foundational rendering logic,
+                including digital differential analyzer (DDA) and Bresenham-style approaches.</li>
+
+            <li><strong>3D Cube Geometry:</strong> Defined cube vertices, edges, and connectivity
+                manually in 3D space.</li>
+
+            <li><strong>Rotation Transformations:</strong> Applied rotation matrices to animate
+                the cube around multiple axes.</li>
+
+            <li><strong>Perspective Projection:</strong> Used projection math to convert 3D points
+                into 2D screen coordinates for a realistic depth effect.</li>
+
+            <li><strong>Frame Rendering Loop:</strong> Built a continuous update-draw pipeline
+                for smooth animation and real-time performance.</li>
+
+            <li><strong>CMake Project Structure:</strong> Fully configured cross-platform
+                CMake setup for building and compiling the application.</li>
+        </ul>
+    </section>
+
+    <section class="project-section">
+        <h2>Implementation Notes</h2>
+        <p>
+            This project emphasized understanding the mathematical foundations of 3D graphics.
+            All rotations, projections, and rendering behavior were implemented manually using
+            vector math and transformation matrices—without relying on graphics APIs.
+        </p>
+
+        <p>
+            The cube is rendered using per-frame updates that apply incremental rotations,
+            followed by projecting the transformed vertices and drawing the connecting edges.
+            This workflow demonstrates strong fundamentals in graphics programming,
+            linear algebra, coordinate space transformations, and low-level rendering logic.
+        </p>
+    </section>
+
+    <section class="project-section">
+        <h2>Project Links</h2>
+        <ul>
+            <li>
+                <a href="https://github.com/Trebor511/RotatingCube-CodeDemo" target="_blank">
+                    GitHub Repository
+                </a>
+            </li>
+        </ul>
+    </section>
+
+</main>
