@@ -198,12 +198,27 @@
   color: #8d98a8;
 }
 
+.site-footer__name {
+  margin: 0;
+  color: #f4f7fb;
+  font-weight: 700;
+}
+
+.site-footer__copyright {
+  margin: 6px 0 0;
+  color: #8d98a8;
+  font-size: 0.9rem;
+}
+
 .site-footer__links {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 20px;
 }
 
 .site-footer__links a {
+  color: #aeb8c6;
   text-decoration: none;
 }
 

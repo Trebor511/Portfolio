@@ -34,13 +34,33 @@ function ProjectCard({ project }) {
           ))}
         </ul>
 
-        <Link
-          className="project-card__link"
-          to={`/projects/${project.slug}`}
-        >
-          View Case Study
-          <span aria-hidden="true"> →</span>
-        </Link>
+        <ul className="technology-list" aria-label="Technologies used">
+          {project.technologies.map((technology) => (
+            <li key={technology}>{technology}</li>
+          ))}
+        </ul>
+
+        <div className="project-card__actions">
+          <Link
+            className="project-card__link"
+            to={`/projects/${project.slug}`}
+          >
+            View Case Study
+            <span aria-hidden="true"> →</span>
+          </Link>
+
+          {project.links?.repository && (
+            <a
+              className="project-card__external-link"
+              href={project.links.repository}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+              <span aria-hidden="true"> ↗</span>
+            </a>
+          )}
+        </div>
       </div>
     </article>
   );

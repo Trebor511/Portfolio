@@ -25,6 +25,15 @@ function Header() {
             Contact
           </NavLink>
         </nav>
+
+        <a
+          href="/resume/Robert-Poore-Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Résumé
+        </a>
+
       </div>
     </header>
   );

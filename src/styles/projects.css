@@ -161,6 +161,30 @@
     margin-top: 36px;
   }
 
+  .project-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 26px;
+  }
+
+  .project-card__actions .project-card__link {
+    margin-top: 0;
+  }
+
+  .project-card__external-link {
+    color: #9ba9bb;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .project-card__external-link:hover {
+    color: #ffffff;
+  }
+
   .project-card__media {
     position: relative;
     aspect-ratio: 16 / 9;

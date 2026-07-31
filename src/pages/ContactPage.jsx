@@ -1,3 +1,5 @@
+import { profile } from "../data/profile";
+
 function ContactPage() {
   return (
     <section className="standard-page contact-page">
@@ -24,7 +26,7 @@ function ContactPage() {
 
           <a
             className="button button--primary"
-            href="mailto:robert.j.poore@gmail.com"
+            href={`mailto:${profile.email}`}
           >
             Email Me
           </a>
@@ -41,7 +43,7 @@ function ContactPage() {
 
           <a
             className="button button--secondary"
-            href="https://github.com/Trebor511"
+            href={profile.github}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -60,7 +62,7 @@ function ContactPage() {
 
           <a
             className="button button--secondary"
-            href="https://linkedin.com/in/robertjpoore"
+            href={profile.linkedin}
             target="_blank"
             rel="noopener noreferrer"
           >

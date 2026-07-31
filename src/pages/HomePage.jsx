@@ -27,6 +27,16 @@ function HomePage() {
             <Link className="button button--secondary" to="/contact">
               Contact Me
             </Link>
+
+            <a
+              className="button button--secondary"
+              href="/resume/Robert-Poore-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Résumé
+            </a>
+
           </div>
         </div>
       </section>
