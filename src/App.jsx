@@ -1,5 +1,8 @@
 import Layout from "./components/Layout";
+import ProjectGrid from "./components/ProjectGrid";
+import { projects } from "./data/projects";
 import "./styles/layout.css";
+import "./styles/projects.css";
 
 function App() {
   return (
@@ -32,10 +35,13 @@ function App() {
           <p className="section-heading__eyebrow">Selected Work</p>
           <h2>Featured Projects</h2>
           <p>
-            Project cards will be added here after the shared layout is
-            complete.
+            A selection of gameplay, systems, and graphics programming projects.
           </p>
         </div>
+
+        <ProjectGrid
+          projects={projects.filter((project) => project.featured)}
+          />
       </section>
 
       <section id="about" className="page-section">
