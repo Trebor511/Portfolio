@@ -1,9 +1,7 @@
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(100%, 320px), 1fr)
-  );
+  grid-template-columns: repeat(auto-fit,
+      minmax(min(100%, 320px), 1fr));
   gap: 28px;
   margin-top: 48px;
 }
@@ -33,11 +31,9 @@
   padding: 24px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   background:
-    linear-gradient(
-      135deg,
+    linear-gradient(135deg,
       rgba(127, 176, 255, 0.16),
-      rgba(65, 84, 130, 0.06)
-    );
+      rgba(65, 84, 130, 0.06));
 }
 
 .project-card__content {
@@ -119,6 +115,46 @@
   color: #9fc4ff;
 }
 
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 48px;
+}
+
+.project-filter {
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  color: #b8c2d1;
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.project-filter:hover {
+  color: #ffffff;
+  border-color: rgba(127, 176, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.project-filter--active {
+  color: #08111f;
+  border-color: #7fb0ff;
+  background: #7fb0ff;
+}
+
+.project-count {
+  margin: 24px 0 -20px;
+  color: #8f9aaa;
+  font-size: 0.9rem;
+}
+
 @media (max-width: 640px) {
   .project-grid {
     gap: 20px;
@@ -126,37 +162,35 @@
   }
 
   .project-card__media {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background:
-    linear-gradient(
-      135deg,
-      rgba(127, 176, 255, 0.16),
-      rgba(65, 84, 130, 0.06)
-    );
-}
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background:
+      linear-gradient(135deg,
+        rgba(127, 176, 255, 0.16),
+        rgba(65, 84, 130, 0.06));
+  }
 
-.project-card__media--placeholder {
-  display: grid;
-  place-items: center;
-  padding: 24px;
-  color: #8fa1bb;
-  font-size: 0.9rem;
-  text-align: center;
-}
+  .project-card__media--placeholder {
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    color: #8fa1bb;
+    font-size: 0.9rem;
+    text-align: center;
+  }
 
-.project-card__video,
-.project-card__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  .project-card__video,
+  .project-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-.project-card__video {
-  background: #080a0f;
-}
+  .project-card__video {
+    background: #080a0f;
+  }
 
   .project-card__content {
     padding: 22px;

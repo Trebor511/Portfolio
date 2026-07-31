@@ -94,7 +94,7 @@
   letter-spacing: -0.035em;
 }
 
-.project-page__section > p:last-child {
+.project-page__section>p:last-child {
   margin: 24px 0 0;
   color: #b8c2d1;
   font-size: 1.08rem;
@@ -115,10 +115,8 @@
 
 .challenge-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(100%, 300px), 1fr)
-  );
+  grid-template-columns: repeat(auto-fit,
+      minmax(min(100%, 300px), 1fr));
   gap: 22px;
   margin-top: 32px;
 }
@@ -159,6 +157,13 @@
 .not-found-page p:not(.section-heading__eyebrow) {
   margin: 22px 0 30px;
   color: #b8c2d1;
+}
+
+.project-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
 }
 
 .project-page--missing .button {

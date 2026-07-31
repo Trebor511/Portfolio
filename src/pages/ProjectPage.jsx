@@ -102,6 +102,49 @@ function ProjectPage() {
           ))}
         </ul>
       </section>
+
+      {project.links &&
+        Object.values(project.links).some((link) => Boolean(link)) && (
+          <section className="project-page__section">
+            <p className="section-heading__eyebrow">Project Links</p>
+            <h2>Explore the project</h2>
+
+            <div className="project-link-list">
+              {project.links.repository && (
+                <a
+                  className="button button--secondary"
+                  href={project.links.repository}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Repository
+                </a>
+              )}
+
+              {project.links.video && (
+                <a
+                  className="button button--secondary"
+                  href={project.links.video}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Watch Video
+                </a>
+              )}
+
+              {project.links.playableBuild && (
+                <a
+                  className="button button--primary"
+                  href={project.links.playableBuild}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Play Project
+                </a>
+              )}
+            </div>
+          </section>
+        )}
     </article>
   );
 }

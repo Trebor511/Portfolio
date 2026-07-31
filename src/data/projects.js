@@ -126,4 +126,237 @@ export const projects = [
       "Completed the primary project requirements.",
     ],
   },
+
+  {
+    id: 4,
+    slug: "devyn-in-space",
+    title: "Devyn in Space",
+    category: "Game Development",
+    summary:
+      "A first-person wave shooter featuring modular weapons, enemy archetypes, upgrades, boss battles, and multiple combat arenas.",
+    role: "Lead Developer and Gameplay Programmer",
+    engine: "Unity 2022",
+    status: "Completed",
+    technologies: ["C#", "Unity", "Enemy AI", "Team Development"],
+    featured: false,
+
+    media: {
+      type: "video",
+      src: "/media/devyn-in-space/demo.mp4",
+      poster: null,
+      alt: "Gameplay demonstration from Devyn in Space",
+    },
+
+    overview:
+      "Devyn in Space is a first-person wave-based shooter developed by a six-person team. The completed game includes four weapons, four standard enemy types, two boss encounters, multiple combat arenas, and an upgrade shop used between waves.",
+
+    responsibilities: [
+      "Served as lead developer for a six-person development team.",
+      "Guided technical decisions and organized the overall code structure.",
+      "Designed and implemented the enemy wave system.",
+      "Contributed to the modular weapon and upgrade systems.",
+      "Designed all four combat levels and both boss arenas.",
+      "Implemented environmental mechanics including ladders, damaging platforms, disappearing platforms, health pickups, and weapon pickups.",
+    ],
+
+    challenges: [
+      {
+        title: "Readable enemy variety",
+        description:
+          "Designed melee, juggernaut, swarm, and ranged enemy archetypes with distinct combat roles so that crowded waves remained understandable to the player.",
+      },
+      {
+        title: "Progressive wave structure",
+        description:
+          "Built progression, escalation, and completion rules that increased difficulty while preserving opportunities for upgrades between encounters.",
+      },
+    ],
+
+    results: [
+      "Completed a fully playable wave-based shooter.",
+      "Delivered four combat levels and two dedicated boss arenas.",
+      "Integrated weapons, enemy AI, upgrades, saving, and wave progression into one complete experience.",
+    ],
+
+    links: {
+      repository:
+        "https://github.com/Kold-Lopez/The-Game-Group-Project/tree/main/The%20Game%20Group%20Project%20X",
+      video: "https://www.youtube.com/watch?v=1iMtDv4wJgQ",
+      playableBuild: "https://thecyansage.itch.io/devyn-in-space",
+    },
+  },
+
+  {
+    id: 5,
+    slug: "conways-game-of-life",
+    title: "Conway's Game of Life",
+    category: "Software Development",
+    summary:
+      "An interactive .NET cellular-automata application with simulation controls, file persistence, configurable behavior, and a complete Windows Forms interface.",
+    role: "Software Developer",
+    engine: ".NET Windows Forms",
+    status: "Completed",
+    technologies: ["C#", ".NET", "Windows Forms", "File I/O"],
+    featured: false,
+
+    media: {
+      type: "video",
+      src: "/media/conway/demo.mp4",
+      poster: null,
+      alt: "Conway's Game of Life application demonstration",
+    },
+
+    overview:
+      "This implementation of Conway's Game of Life is an interactive Windows Forms application that simulates cellular automata while providing controls for universe configuration, simulation speed, rendering, saving, loading, and persistent user settings.",
+
+    responsibilities: [
+      "Implemented interactive cell-grid rendering.",
+      "Created start, pause, step, clear, and randomization controls.",
+      "Built saving and loading for universe data.",
+      "Added configurable universe dimensions and simulation timing.",
+      "Implemented finite and toroidal boundary behavior.",
+      "Created persistent application settings for size, speed, display options, and colors.",
+    ],
+
+    challenges: [
+      {
+        title: "Simulation state synchronization",
+        description:
+          "Kept the grid, generation counter, living-cell count, timer, menus, toolbar controls, and HUD synchronized as the simulation changed.",
+      },
+      {
+        title: "Persistent configuration",
+        description:
+          "Created a settings workflow that preserved user-selected dimensions, colors, timing, boundary behavior, and display preferences between sessions.",
+      },
+    ],
+
+    results: [
+      "Completed all required basic and advanced application features.",
+      "Built a responsive interface around an algorithmic simulation.",
+      "Strengthened skills in event-driven programming, file I/O, state management, and desktop UI development.",
+    ],
+
+    links: {
+      repository: "https://github.com/Trebor511/GameofLife-CodeDemo",
+      video: null,
+      playableBuild: null,
+    },
+  },
+
+  {
+    id: 6,
+    slug: "rotating-cube",
+    title: "Rotating Cube",
+    category: "Graphics Programming",
+    summary:
+      "A custom C++ renderer that plots and animates 3D cube geometry using manual transformations, perspective projection, and line-drawing algorithms.",
+    role: "Graphics Programmer",
+    engine: "Custom Renderer",
+    status: "Completed",
+    technologies: ["C++", "CMake", "Linear Algebra", "Rasterization"],
+    featured: false,
+
+    media: {
+      type: "video",
+      src: "/media/rotating-cube/demo.mp4",
+      poster: null,
+      alt: "Rotating Cube graphics demonstration",
+    },
+
+    overview:
+      "Rotating Cube is a C++ computer-graphics project that began with foundational line-drawing algorithms and expanded into a real-time animated 3D cube. Its vertices, edges, transformations, projection, and pixel rendering were implemented without a game engine.",
+
+    responsibilities: [
+      "Implemented DDA and Bresenham-style line-drawing logic.",
+      "Defined cube vertices and edge connectivity manually.",
+      "Applied rotation matrices across multiple axes.",
+      "Converted 3D coordinates into 2D screen positions using perspective projection.",
+      "Built a continuous update-and-render loop.",
+      "Configured the application using CMake.",
+    ],
+
+    challenges: [
+      {
+        title: "Manual 3D transformation",
+        description:
+          "Implemented rotation and perspective behavior using vectors, matrices, coordinate-space conversion, and projected screen positions.",
+      },
+      {
+        title: "Rendering without an engine",
+        description:
+          "Created the visual output using custom line drawing, pixel plotting, and per-frame updates rather than relying on a prebuilt rendering system.",
+      },
+    ],
+
+    results: [
+      "Produced a smoothly animated real-time 3D cube.",
+      "Demonstrated practical understanding of matrices, projection, and coordinate spaces.",
+      "Established the rendering foundation later expanded by the Level Renderer project.",
+    ],
+
+    links: {
+      repository: "https://github.com/Trebor511/RotatingCube-CodeDemo",
+      video: null,
+      playableBuild: null,
+    },
+  },
+
+  {
+    id: 7,
+    slug: "concentrate",
+    title: "Concentrate!",
+    category: "Graphics Programming",
+    summary:
+      "A retro arcade game built without a traditional engine using Vulkan, C++, a custom sprite renderer, and FLECS entity-component architecture.",
+    role: "Gameplay and Graphics Programmer",
+    engine: "Custom Vulkan Framework",
+    status: "Completed",
+    technologies: ["C++", "Vulkan", "FLECS", "ECS"],
+    featured: false,
+
+    media: {
+      type: "video",
+      src: "/media/concentrate/demo.mp4",
+      poster: null,
+      alt: "Gameplay demonstration from Concentrate!",
+    },
+
+    overview:
+      "Concentrate! is a retro arcade game inspired by Tapper and created without Unity, Unreal Engine, or another traditional game engine. It extends the Level Renderer foundation into a complete game using Vulkan rendering and FLECS entity-component architecture.",
+
+    responsibilities: [
+      "Implemented the Vulkan rendering pipeline and sprite-rendering foundation.",
+      "Built entities and components for the player, drinks, patrons, and game systems.",
+      "Created player movement and drink-serving mechanics.",
+      "Implemented patron behavior, scoring, failure states, and game-loop logic.",
+      "Built spawn timing, escalating difficulty, and resource-management systems.",
+      "Managed GPU and CPU synchronization within the custom framework.",
+    ],
+
+    challenges: [
+      {
+        title: "Engine-free gameplay architecture",
+        description:
+          "Built the rendering, input, update, entity, and gameplay systems without relying on the services of a traditional game engine.",
+      },
+      {
+        title: "ECS-driven behavior",
+        description:
+          "Separated entities, data, and systems through FLECS so gameplay behavior could remain organized and efficient.",
+      },
+    ],
+
+    results: [
+      "Converted a graphics renderer into a fully playable arcade game.",
+      "Implemented a complete custom sprite and gameplay framework.",
+      "Developed practical experience with Vulkan, ECS design, memory handling, and synchronization.",
+    ],
+
+    links: {
+      repository: "https://github.com/Trebor511/Concentrate--CodeDemo",
+      video: "https://www.youtube.com/watch?v=V_uVH5sprgg",
+      playableBuild: null,
+    },
+  },
 ];
