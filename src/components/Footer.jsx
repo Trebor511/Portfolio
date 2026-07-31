@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 function Footer() {
   return (
     <footer className="site-footer">
@@ -5,6 +7,8 @@ function Footer() {
         <p>© {new Date().getFullYear()} Robert Poore</p>
 
         <div className="site-footer__links">
+          <Link to="/contact">Contact</Link>
+
           <a
             href="https://github.com/Trebor511"
             target="_blank"
@@ -14,7 +18,7 @@ function Footer() {
           </a>
 
           <a
-            href="https://linkedin.com/in/robertjpoore"
+            href="https://www.linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
           >

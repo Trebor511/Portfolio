@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 function Header() {
   return (
@@ -9,9 +9,21 @@ function Header() {
         </Link>
 
         <nav className="site-nav" aria-label="Primary navigation">
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <NavLink to="/" end>
+            Home
+          </NavLink>
+
+          <NavLink to="/work">
+            Work
+          </NavLink>
+
+          <NavLink to="/about">
+            About
+          </NavLink>
+
+          <NavLink to="/contact">
+            Contact
+          </NavLink>
         </nav>
       </div>
     </header>

@@ -1,7 +1,10 @@
+import { Link } from "react-router";
 import ProjectGrid from "../components/ProjectGrid";
 import { projects } from "../data/projects";
 
 function HomePage() {
+  const featuredProjects = projects.filter((project) => project.featured);
+
   return (
     <>
       <section className="hero">
@@ -12,52 +15,56 @@ function HomePage() {
 
           <p className="hero__summary">
             I am a gameplay programmer and software engineer focused on Unreal
-            Engine, C++, systems design, and development tools.
+            Engine, C++, systems design, graphics programming, and development
+            tools.
           </p>
 
           <div className="hero__actions">
-            <a className="button button--primary" href="#work">
+            <Link className="button button--primary" to="/work">
               View My Work
-            </a>
+            </Link>
 
-            <a className="button button--secondary" href="#contact">
+            <Link className="button button--secondary" to="/contact">
               Contact Me
-            </a>
+            </Link>
           </div>
         </div>
       </section>
 
-      <section id="work" className="page-section">
-        <div className="section-heading">
-          <p className="section-heading__eyebrow">Selected Work</p>
-          <h2>Featured Projects</h2>
-          <p>
-            A selection of gameplay, systems, and graphics programming
-            projects.
-          </p>
+      <section className="page-section">
+        <div className="section-heading section-heading--with-action">
+          <div>
+            <p className="section-heading__eyebrow">Selected Work</p>
+            <h2>Featured Projects</h2>
+            <p>
+              A selection of gameplay, systems, and graphics programming
+              projects.
+            </p>
+          </div>
+
+          <Link className="text-link" to="/work">
+            View all projects
+            <span aria-hidden="true"> →</span>
+          </Link>
         </div>
 
-        <ProjectGrid
-          projects={projects.filter((project) => project.featured)}
-        />
+        <ProjectGrid projects={featuredProjects} />
       </section>
 
-      <section id="about" className="page-section">
+      <section className="page-section home-introduction">
         <div className="section-heading">
-          <p className="section-heading__eyebrow">About</p>
+          <p className="section-heading__eyebrow">About Me</p>
           <h2>Gameplay-focused development</h2>
-          <p>
-            I specialize in building reusable gameplay systems, tools, and
-            technical foundations for interactive projects.
-          </p>
-        </div>
-      </section>
 
-      <section id="contact" className="page-section">
-        <div className="section-heading">
-          <p className="section-heading__eyebrow">Contact</p>
-          <h2>Let&apos;s build something</h2>
-          <p>Contact information and professional links will appear here.</p>
+          <p>
+            I build reusable gameplay systems and technical foundations with a
+            focus on C++, Unreal Engine, and maintainable architecture.
+          </p>
+
+          <Link className="text-link" to="/about">
+            More about my experience
+            <span aria-hidden="true"> →</span>
+          </Link>
         </div>
       </section>
     </>
