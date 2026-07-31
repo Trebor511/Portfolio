@@ -1,11 +1,9 @@
+import ProjectMedia from "./ProjectMedia";
+
 function ProjectCard({ project }) {
   return (
     <article className="project-card">
-      <div className="project-card__media">
-        <span className="project-card__placeholder">
-          Project media coming soon
-        </span>
-      </div>
+      <ProjectMedia media={project.media} title={project.title} />
 
       <div className="project-card__content">
         <div className="project-card__meta">

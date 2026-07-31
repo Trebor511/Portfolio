@@ -1,5 +1,5 @@
 export const projects = [
-  {
+ {
     id: 1,
     slug: "moms-kitchen",
     title: "Mom's Kitchen",
@@ -11,6 +11,12 @@ export const projects = [
     status: "In Development",
     technologies: ["C++", "Blueprints", "Unreal Engine"],
     featured: true,
+    media: {
+      type: "video",
+      src: "/media/moms-kitchen/demo.mp4",
+      poster: null,
+      alt: "Gameplay demonstration from Mom's Kitchen",
+    },
   },
   {
     id: 2,
@@ -24,8 +30,14 @@ export const projects = [
     status: "Completed",
     technologies: ["C#", "Unity", "Team Development"],
     featured: true,
+    media: {
+      type: "video",
+      src: "/media/pixelcution/demo.mp4",
+      poster: null,
+      alt: "Gameplay demonstration from Pixelcution",
+    },
   },
-  {
+{
     id: 3,
     slug: "level-renderer",
     title: "Level Renderer",
@@ -37,5 +49,11 @@ export const projects = [
     status: "Completed",
     technologies: ["C++", "Vulkan", "File Parsing"],
     featured: true,
+    media: {
+      type: "video",
+      src: "/media/level-renderer/demo.mp4",
+      poster: null,
+      alt: "Runtime rendering demonstration from Level Renderer",
+    },
   },
 ];
