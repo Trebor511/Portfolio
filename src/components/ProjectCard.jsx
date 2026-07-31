@@ -1,4 +1,5 @@
 import ProjectMedia from "./ProjectMedia";
+import { Link } from "react-router";
 
 function ProjectCard({ project }) {
   return (
@@ -33,10 +34,13 @@ function ProjectCard({ project }) {
           ))}
         </ul>
 
-        <a className="project-card__link" href={`#${project.slug}`}>
+        <Link
+          className="project-card__link"
+          to={`/projects/${project.slug}`}
+        >
           View Case Study
           <span aria-hidden="true"> →</span>
-        </a>
+        </Link>
       </div>
     </article>
   );

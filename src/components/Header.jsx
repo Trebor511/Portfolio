@@ -1,10 +1,12 @@
+import { Link } from "react-router";
+
 function Header() {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <a className="site-brand" href="/">
+        <Link className="site-brand" to="/">
           Robert Poore
-        </a>
+        </Link>
 
         <nav className="site-nav" aria-label="Primary navigation">
           <a href="#work">Work</a>
