@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router";
 import ProjectMedia from "../components/ProjectMedia";
 import { projects } from "../data/projects";
+import Reveal from "../components/Reveal";
 
 function ProjectPage() {
   const { slug } = useParams();
@@ -8,7 +9,8 @@ function ProjectPage() {
   const project = projects.find((item) => item.slug === slug);
 
   if (!project) {
-    return (
+  return (
+    <Reveal>
       <section className="project-page project-page--missing">
         <p className="section-heading__eyebrow">Project Not Found</p>
         <h1>That project does not exist.</h1>
@@ -17,14 +19,16 @@ function ProjectPage() {
           Return Home
         </Link>
       </section>
-    );
-  }
+    </Reveal>
+  );
+}
 
   return (
-    <article className="project-page">
+  <article className="project-page">
+    <Reveal>
       <header className="project-page__header">
-        <Link className="project-page__back" to="/">
-          <span aria-hidden="true">←</span> Back to portfolio
+        <Link className="project-page__back" to="/work">
+          <span aria-hidden="true">←</span> Back to projects
         </Link>
 
         <p className="project-page__eyebrow">{project.category}</p>
@@ -56,17 +60,23 @@ function ProjectPage() {
           ))}
         </ul>
       </header>
+    </Reveal>
 
+    <Reveal delay={100}>
       <div className="project-page__media">
         <ProjectMedia media={project.media} title={project.title} />
       </div>
+    </Reveal>
 
+    <Reveal>
       <section className="project-page__section">
         <p className="section-heading__eyebrow">Overview</p>
         <h2>Project overview</h2>
         <p>{project.overview}</p>
       </section>
+    </Reveal>
 
+    <Reveal>
       <section className="project-page__section">
         <p className="section-heading__eyebrow">Responsibilities</p>
         <h2>What I worked on</h2>
@@ -77,21 +87,33 @@ function ProjectPage() {
           ))}
         </ul>
       </section>
+    </Reveal>
 
+    <Reveal>
       <section className="project-page__section">
-        <p className="section-heading__eyebrow">Technical Challenges</p>
+        <p className="section-heading__eyebrow">
+          Technical Challenges
+        </p>
+
         <h2>Problems and solutions</h2>
 
         <div className="challenge-grid">
-          {project.challenges.map((challenge) => (
-            <article className="challenge-card" key={challenge.title}>
-              <h3>{challenge.title}</h3>
-              <p>{challenge.description}</p>
-            </article>
+          {project.challenges.map((challenge, index) => (
+            <Reveal
+              delay={Math.min(index * 100, 300)}
+              key={challenge.title}
+            >
+              <article className="challenge-card">
+                <h3>{challenge.title}</h3>
+                <p>{challenge.description}</p>
+              </article>
+            </Reveal>
           ))}
         </div>
       </section>
+    </Reveal>
 
+    <Reveal>
       <section className="project-page__section">
         <p className="section-heading__eyebrow">Results</p>
         <h2>Project outcomes</h2>
@@ -102,9 +124,11 @@ function ProjectPage() {
           ))}
         </ul>
       </section>
+    </Reveal>
 
-      {project.links &&
-        Object.values(project.links).some((link) => Boolean(link)) && (
+    {project.links &&
+      Object.values(project.links).some((link) => Boolean(link)) && (
+        <Reveal>
           <section className="project-page__section">
             <p className="section-heading__eyebrow">Project Links</p>
             <h2>Explore the project</h2>
@@ -144,9 +168,10 @@ function ProjectPage() {
               )}
             </div>
           </section>
-        )}
-    </article>
-  );
+        </Reveal>
+      )}
+  </article>
+);
 }
 
 export default ProjectPage;

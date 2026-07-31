@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import ProjectGrid from "../components/ProjectGrid";
 import { projects } from "../data/projects";
+import Reveal from "../components/Reveal";
 
 function HomePage() {
   const featuredProjects = projects.filter((project) => project.featured);
@@ -8,10 +9,19 @@ function HomePage() {
   return (
     <>
       <section className="hero">
-        <div className="hero__content">
+        <Reveal className="hero__content">
+          <div className="availability-badge">
+            <span className="availability-badge__indicator" aria-hidden="true" />
+            Open to gameplay and tools programming opportunities
+          </div>
+
           <p className="hero__eyebrow">Gameplay Programmer</p>
 
-          <h1>I build modular gameplay systems and interactive experiences.</h1>
+          <h1>
+            I build{" "}
+            <span className="gradient-text">modular gameplay systems</span>{" "}
+            and interactive experiences.
+          </h1>
 
           <p className="hero__summary">
             I am a gameplay programmer and software engineer focused on Unreal
@@ -38,44 +48,49 @@ function HomePage() {
             </a>
 
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="page-section">
-        <div className="section-heading section-heading--with-action">
-          <div>
-            <p className="section-heading__eyebrow">Selected Work</p>
-            <h2>Featured Projects</h2>
-            <p>
-              A selection of gameplay, systems, and graphics programming
-              projects.
-            </p>
-          </div>
+        <Reveal>
+          <div className="section-heading section-heading--with-action">
+            <div>
+              <p className="section-heading__eyebrow">Selected Work</p>
+              <h2>Featured Projects</h2>
+              <p>
+                A selection of gameplay, systems, and graphics programming
+                projects.
+              </p>
+            </div>
 
-          <Link className="text-link" to="/work">
-            View all projects
-            <span aria-hidden="true"> →</span>
-          </Link>
-        </div>
+            <Link className="text-link" to="/work">
+              View all projects
+              <span aria-hidden="true"> →</span>
+            </Link>
+          </div>
+        </Reveal>
+
 
         <ProjectGrid projects={featuredProjects} />
       </section>
 
       <section className="page-section home-introduction">
-        <div className="section-heading">
-          <p className="section-heading__eyebrow">About Me</p>
-          <h2>Gameplay-focused development</h2>
+        <Reveal>
+          <div className="section-heading">
+            <p className="section-heading__eyebrow">About Me</p>
+            <h2>Gameplay-focused development</h2>
 
-          <p>
-            I build reusable gameplay systems and technical foundations with a
-            focus on C++, Unreal Engine, and maintainable architecture.
-          </p>
+            <p>
+              I build reusable gameplay systems and technical foundations with a
+              focus on C++, Unreal Engine, and maintainable architecture.
+            </p>
 
-          <Link className="text-link" to="/about">
-            More about my experience
-            <span aria-hidden="true"> →</span>
-          </Link>
-        </div>
+            <Link className="text-link" to="/about">
+              More about my experience
+              <span aria-hidden="true"> →</span>
+            </Link>
+          </div>
+        </Reveal>
       </section>
     </>
   );

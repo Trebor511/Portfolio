@@ -121,6 +121,14 @@
   margin-top: 32px;
 }
 
+.challenge-grid > .reveal {
+  height: 100%;
+}
+
+.challenge-grid .challenge-card {
+  height: 100%;
+}
+
 .challenge-card {
   padding: 28px;
   border: 1px solid rgba(255, 255, 255, 0.09);

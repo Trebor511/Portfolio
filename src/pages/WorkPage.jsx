@@ -2,6 +2,7 @@ import { useState } from "react";
 import ProjectFilters from "../components/ProjectFilters";
 import ProjectGrid from "../components/ProjectGrid";
 import { projects } from "../data/projects";
+import Reveal from "../components/Reveal";
 
 function WorkPage() {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -10,27 +11,31 @@ function WorkPage() {
     activeFilter === "All"
       ? projects
       : projects.filter(
-          (project) => project.category === activeFilter,
-        );
+        (project) => project.category === activeFilter,
+      );
 
   return (
     <section className="standard-page">
-      <header className="page-header">
-        <p className="section-heading__eyebrow">Portfolio</p>
+      <Reveal>
+        <header className="page-header">
+          <p className="section-heading__eyebrow">Portfolio</p>
 
-        <h1>My Work</h1>
+          <h1>My Work</h1>
 
-        <p>
-          Gameplay, systems, tools, software, and graphics programming
-          projects created through independent development, academic work, and
-          team collaboration.
-        </p>
-      </header>
+          <p>
+            Gameplay, systems, tools, software, and graphics programming
+            projects created through independent development, academic work, and
+            team collaboration.
+          </p>
+        </header>
+      </Reveal>
 
-      <ProjectFilters
-        activeFilter={activeFilter}
-        onFilterChange={setActiveFilter}
-      />
+      <Reveal delay={100}>
+        <ProjectFilters
+          activeFilter={activeFilter}
+          onFilterChange={setActiveFilter}
+        />
+      </Reveal>
 
       <p className="project-count" aria-live="polite">
         Showing {visibleProjects.length}{" "}

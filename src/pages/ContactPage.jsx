@@ -1,74 +1,84 @@
+import Reveal from "../components/Reveal";
 import { profile } from "../data/profile";
 
 function ContactPage() {
   return (
     <section className="standard-page contact-page">
-      <header className="page-header">
-        <p className="section-heading__eyebrow">Contact</p>
+      <Reveal>
+        <header className="page-header">
+          <p className="section-heading__eyebrow">Contact</p>
 
-        <h1>Let&apos;s build something.</h1>
+          <h1>Let&apos;s build something.</h1>
 
-        <p>
-          I am interested in gameplay programming, tools programming, software
-          engineering, and collaborative game-development opportunities.
-        </p>
-      </header>
+          <p>
+            I am interested in gameplay programming, tools programming,
+            software engineering, and collaborative game-development
+            opportunities.
+          </p>
+        </header>
+      </Reveal>
 
       <div className="contact-grid">
-        <article className="contact-card">
-          <p className="contact-card__label">Email</p>
-          <h2>Send me a message</h2>
+        <Reveal delay={80}>
+          <article className="contact-card">
+            <p className="contact-card__label">Email</p>
+            <h2>Send me a message</h2>
 
-          <p>
-            The best way to contact me about employment, projects, or
-            professional opportunities.
-          </p>
+            <p>
+              The best way to contact me about employment, projects, or
+              professional opportunities.
+            </p>
 
-          <a
-            className="button button--primary"
-            href={`mailto:${profile.email}`}
-          >
-            Email Me
-          </a>
-        </article>
+            <a
+              className="button button--primary"
+              href={`mailto:${profile.email}`}
+            >
+              Email Me
+            </a>
+          </article>
+        </Reveal>
 
-        <article className="contact-card">
-          <p className="contact-card__label">GitHub</p>
-          <h2>Review my code</h2>
+        <Reveal delay={160}>
+          <article className="contact-card">
+            <p className="contact-card__label">GitHub</p>
+            <h2>Review my code</h2>
 
-          <p>
-            Browse my repositories, programming exercises, and project source
-            code.
-          </p>
+            <p>
+              Browse my repositories, programming exercises, and project
+              source code.
+            </p>
 
-          <a
-            className="button button--secondary"
-            href={profile.github}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Open GitHub
-          </a>
-        </article>
+            <a
+              className="button button--secondary"
+              href={profile.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open GitHub
+            </a>
+          </article>
+        </Reveal>
 
-        <article className="contact-card">
-          <p className="contact-card__label">LinkedIn</p>
-          <h2>Connect professionally</h2>
+        <Reveal delay={240}>
+          <article className="contact-card">
+            <p className="contact-card__label">LinkedIn</p>
+            <h2>Connect professionally</h2>
 
-          <p>
-            View my employment history, skills, education, and professional
-            updates.
-          </p>
+            <p>
+              View my employment history, skills, education, and professional
+              updates.
+            </p>
 
-          <a
-            className="button button--secondary"
-            href={profile.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Open LinkedIn
-          </a>
-        </article>
+            <a
+              className="button button--secondary"
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open LinkedIn
+            </a>
+          </article>
+        </Reveal>
       </div>
     </section>
   );

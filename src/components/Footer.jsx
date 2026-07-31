@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { profile } from "../data/profile";
 
 function Footer() {
   return (
@@ -16,7 +17,7 @@ function Footer() {
           <Link to="/contact">Contact</Link>
 
           <a
-            href="/resume/Robert-Poore-Resume.pdf"
+            href={profile.resume}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -24,7 +25,7 @@ function Footer() {
           </a>
 
           <a
-            href="https://github.com/Trebor511"
+            href={profile.github}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -32,7 +33,7 @@ function Footer() {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/robertjpoore/"
+            href={profile.linkedin}
             target="_blank"
             rel="noopener noreferrer"
           >
