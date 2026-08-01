@@ -36,6 +36,34 @@ jobs:
       - name: Build portfolio
         run: npm run build
 
+      - name: Verify production files
+        shell: bash
+        run: |
+          echo "===== DIST ROOT ====="
+          find dist -maxdepth 2 -type f -print
+
+          echo "===== MEDIA FILES ====="
+          find dist/media -maxdepth 3 -type f -printf '%p %s bytes\n'
+
+          echo "===== REQUIRED FILE CHECKS ====="
+          test -f dist/index.html
+          test -f dist/favicon.svg
+          test -f dist/social-preview.png
+
+          test -f dist/media/moms-kitchen/poster.webp
+          test -f dist/media/moms-kitchen/demo.mp4
+
+          test -f dist/media/pixelcution/poster.webp
+          test -f dist/media/pixelcution/demo.mp4
+
+          test -f dist/media/level-renderer/poster.webp
+          test -f dist/media/level-renderer/demo.mp4
+
+          echo "===== DIST SIZE ====="
+          du -sh dist
+
+          echo "All required production files are present."
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 

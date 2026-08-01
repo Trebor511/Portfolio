@@ -58,7 +58,7 @@ export const projects = [
   category: "Game Development",
 
   summary:
-    "A fast-paced top-down action shooter built in Unreal Engine 4.27, featuring modular weapons, enemy archetypes, procedural dungeon generation, and roguelite progression.",
+    "A fast-paced first-person action shooter built in Unreal Engine 4.27, featuring modular weapons, enemy archetypes, procedural dungeon generation, and roguelite progression.",
 
   role: "Lead Developer and Gameplay Programmer",
   engine: "Unreal Engine 4.27",
