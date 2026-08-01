@@ -34,12 +34,6 @@ function ProjectCard({ project }) {
           ))}
         </ul>
 
-        <ul className="technology-list" aria-label="Technologies used">
-          {project.technologies.map((technology) => (
-            <li key={technology}>{technology}</li>
-          ))}
-        </ul>
-
         <div className="project-card__actions">
           <Link
             className="project-card__link"

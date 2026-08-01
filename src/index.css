@@ -17,6 +17,7 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -73,6 +74,10 @@ a {
   transform: translateY(0);
 }
 
+body.mobile-menu-open {
+  overflow: hidden;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -90,9 +95,13 @@ a {
     opacity: 1;
     transform: none;
   }
+
+  .menu-toggle__line,
+  .site-nav {
+    transition: none;
+  }
 }
 
 #root {
   min-height: 100vh;
 }
-
