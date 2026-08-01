@@ -1,3 +1,5 @@
+import { assetPath } from "../utils/assetPath";
+
 function ProjectMedia({
   media,
   title,
@@ -14,13 +16,21 @@ function ProjectMedia({
   const fallbackAlt =
     media.alt || `${title} project media`;
 
+  const resolvedSource = media.src
+    ? assetPath(media.src)
+    : undefined;
+
+  const resolvedPoster = media.poster
+    ? assetPath(media.poster)
+    : undefined;
+
   if (displayMode === "card") {
-    if (media.poster) {
+    if (resolvedPoster) {
       return (
         <div className="project-card__media">
           <img
             className="project-card__image"
-            src={media.poster}
+            src={resolvedPoster}
             alt={fallbackAlt}
             loading="lazy"
             decoding="async"
@@ -45,13 +55,13 @@ function ProjectMedia({
     );
   }
 
-  if (media.type === "video") {
+  if (media.type === "video" && resolvedSource) {
     return (
       <div className="project-card__media">
         <video
           className="project-card__video"
-          src={media.src}
-          poster={media.poster || undefined}
+          src={resolvedSource}
+          poster={resolvedPoster}
           aria-label={fallbackAlt}
           muted
           loop
@@ -65,12 +75,12 @@ function ProjectMedia({
     );
   }
 
-  if (media.type === "image") {
+  if (media.type === "image" && resolvedSource) {
     return (
       <div className="project-card__media">
         <img
           className="project-card__image"
-          src={media.src}
+          src={resolvedSource}
           alt={fallbackAlt}
           loading="lazy"
           decoding="async"

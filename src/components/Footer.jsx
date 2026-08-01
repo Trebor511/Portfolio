@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { profile } from "../data/profile";
+import { assetPath } from "../utils/assetPath";
 
 function Footer() {
   return (
@@ -17,7 +18,7 @@ function Footer() {
           <Link to="/contact">Contact</Link>
 
           <a
-            href={profile.resume}
+            href={assetPath(profile.resume)}
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -258,19 +258,20 @@
   }
 
   .project-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
     margin-top: auto;
     padding-top: 26px;
   }
 
-  .project-card__actions .project-card__link {
-    margin-top: 0;
-  }
-
+  .project-card__link,
   .project-card__external-link {
-    color: #9ba9bb;
-    font-size: 0.92rem;
-    font-weight: 700;
-    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
   }
 
   .project-card__external-link:hover {

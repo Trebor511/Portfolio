@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router";
 import { profile } from "../data/profile";
+import { assetPath } from "../utils/assetPath";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -115,7 +116,7 @@ function Header() {
           </NavLink>
 
           <a
-            href={profile.resume}
+            href={assetPath(profile.resume)}
             target="_blank"
             rel="noopener noreferrer"
             onClick={closeMenu}

@@ -52,80 +52,173 @@ export const projects = [
 
 
   {
-    id: 2,
-    slug: "pixelcution",
-    title: "Pixelcution",
-    category: "Game Development",
-    summary:
-      "A team-developed action game featuring player combat, gameplay systems, and collaborative development.",
-    role: "Gameplay Programmer",
-    engine: "Unity",
-    status: "Completed",
-    technologies: ["C#", "Unity", "Team Development"],
-    featured: true,
-    media: {
-      type: "video",
-      src: "/media/pixelcution/demo.mp4",
-      poster: "/media/pixelcution/poster.webp",
-      alt: "Gameplay demonstration from Pixelcution",
-    },
-    overview:
-      "Additional project information will be added as this case study is expanded.",
+  id: 2,
+  slug: "pixelcution",
+  title: "Pixelcution",
+  category: "Game Development",
 
-    responsibilities: [
-      "Implemented gameplay and technical systems for the project.",
-    ],
+  summary:
+    "A fast-paced top-down action shooter built in Unreal Engine 4.27, featuring modular weapons, enemy archetypes, procedural dungeon generation, and roguelite progression.",
 
-    challenges: [
-      {
-        title: "Project development",
-        description:
-          "This section will document the project's most important technical challenge.",
-      },
-    ],
+  role: "Lead Developer and Gameplay Programmer",
+  engine: "Unreal Engine 4.27",
+  status: "Completed",
 
-    results: [
-      "Completed the primary project requirements.",
-    ],
+  technologies: [
+    "C++",
+    "Unreal Engine",
+    "Perforce",
+    "Procedural Generation",
+  ],
+
+  featured: true,
+
+  media: {
+    type: "video",
+    src: "media/pixelcution/demo.mp4",
+    poster: "media/pixelcution/poster.webp",
+    alt:
+      "Pixelcution gameplay featuring combat against robotic enemies",
   },
+
+  overview:
+    "Pixelcution is a fast-paced top-down action shooter developed in Unreal Engine 4.27 by a five-person team, with me serving as lead developer. The game combines a dynamic weapon system, several enemy archetypes, procedurally generated dungeon rooms, and a roguelite-inspired relic progression system. As lead developer, I coordinated the technical direction, guided feature implementation, and contributed several of the project's central gameplay systems.",
+
+  responsibilities: [
+    "Served as lead developer for a five-person development team.",
+    "Coordinated technical direction and helped guide feature implementation.",
+    "Implemented the complete player movement system, including directional movement, jumping, and dashing.",
+    "Developed all player weapons, including firing behavior, ammunition, reload mechanics, recoil, animations, and effects.",
+    "Built the player controller and refined the overall combat feel.",
+    "Designed the tutorial stage and central hub area.",
+    "Helped create and tune melee, caster, and grenadier enemy behavior.",
+    "Implemented health, stamina, weapon, and relic pickups.",
+    "Collaborated with the team using Perforce version control.",
+  ],
+
+  challenges: [
+    {
+      title: "Flexible weapon architecture",
+      description:
+        "The project needed several weapons with different firing behavior while sharing ammunition, reload, input, animation, and combat foundations. The resulting system supported a pistol, assault rifle, shotgun, grenades, and an RPG.",
+    },
+    {
+      title: "Procedural dungeon generation",
+      description:
+        "The dungeon system assembled modular rooms at runtime to create combat arenas, relic rooms, and navigable paths while maintaining a readable progression through each run.",
+    },
+    {
+      title: "Distinct enemy archetypes",
+      description:
+        "Swordsmen pressured the player at close range, flying magic casters introduced ranged and vertical threats, and grenadiers created dangerous projectile zones whose bombs could be shot out of the air.",
+    },
+    {
+      title: "Responsive combat feel",
+      description:
+        "Movement, dashing, jumping, weapon handling, pickups, HUD feedback, and enemy pressure needed to work together to create a responsive action experience.",
+    },
+  ],
+
+  results: [
+    "Delivered a completed action shooter with multiple weapons, enemy archetypes, progression systems, and procedurally generated dungeon content.",
+    "Created a player-combat foundation supporting movement, jumping, dashing, weapon switching, ammunition, and reload behavior.",
+    "Integrated relic upgrades that improved mobility, damage output, and survivability between runs.",
+    "Implemented supporting systems including a shop, pickups, fog-of-war minimap, health and stamina displays, ammunition information, reload feedback, and scoring.",
+    "Helped coordinate feature delivery across a five-person development team.",
+  ],
+
+  links: {
+    repository:
+      "https://github.com/Trebor511/Pixelcution-CodeDemo",
+    video:
+      "https://www.youtube.com/watch?v=8wpWHFE2NiM",
+    playableBuild:
+      "https://kablr-productions.itch.io/pixelcution",
+  },
+},
+
   {
-    id: 3,
-    slug: "level-renderer",
-    title: "Level Renderer",
-    category: "Graphics Programming",
-    summary:
-      "A runtime level-rendering project focused on file parsing, scene generation, transformations, and graphics programming.",
-    role: "Graphics Programmer",
-    engine: "Custom Engine",
-    status: "Completed",
-    technologies: ["C++", "Vulkan", "File Parsing"],
-    featured: true,
-    media: {
-      type: "video",
-      src: "/media/level-renderer/demo.mp4",
-      poster: "/media/level-renderer/poster.webp",
-      alt: "Runtime rendering demonstration from Level Renderer",
-    },
+  id: 3,
+  slug: "level-renderer",
+  title: "Level Renderer",
+  category: "Graphics Programming",
 
-    overview:
-      "Additional project information will be added as this case study is expanded.",
+  summary:
+    "A real-time C++ level renderer that imports custom scene data, reconstructs Blender-authored levels, and renders multiple transformed 3D models at runtime.",
 
-    responsibilities: [
-      "Implemented gameplay and technical systems for the project.",
-    ],
+  role: "Graphics Programmer",
+  engine: "Custom Gateware Renderer",
+  status: "Completed",
 
-    challenges: [
-      {
-        title: "Project development",
-        description:
-          "This section will document the project's most important technical challenge.",
-      },
-    ],
+  technologies: [
+    "C++",
+    "Gateware",
+    "Blender",
+    "h2bParser",
+    "File Parsing",
+  ],
 
-    results: [
-      "Completed the primary project requirements.",
-    ],
+  featured: true,
+
+  media: {
+    type: "video",
+    src: "media/level-renderer/demo.mp4",
+    poster: "media/level-renderer/poster.webp",
+    alt:
+      "Level Renderer demonstrating a dynamically loaded 3D scene",
   },
+
+  overview:
+    "Level Renderer is a C++ graphics-programming project developed as an extension of my Rotating Cube renderer. The goal was to evolve the original renderer into a functional real-time level loader capable of importing custom scene data, reading object transforms, and efficiently rendering multiple 3D models. Levels were authored in Blender and exported through a purpose-built pipeline that allowed the scene to be reconstructed inside the renderer.",
+
+  responsibilities: [
+    "Created a custom text-based level-description format.",
+    "Implemented a parser that reads model filenames, positions, rotations, and scaling data.",
+    "Integrated h2bParser to load mesh information from exported .h2b files.",
+    "Built a Blender-to-engine workflow for exporting transform data.",
+    "Applied translation, rotation, and scaling matrices using Gateware math utilities.",
+    "Created an object-oriented system for storing and rendering multiple models.",
+    "Implemented scene generation by iteratively parsing level data at runtime.",
+    "Built world, view, and projection transformation pipelines.",
+  ],
+
+  challenges: [
+    {
+      title: "Blender-to-engine reconstruction",
+      description:
+        "Transform information authored in Blender needed to be exported in a predictable format and then interpreted correctly by the renderer so that position, rotation, and scale matched the original scene.",
+    },
+    {
+      title: "Custom runtime level parsing",
+      description:
+        "The renderer needed to read model identifiers and transform values from a text-based level file, construct the appropriate model instances, and generate the scene dynamically.",
+    },
+    {
+      title: "Managing multiple mesh instances",
+      description:
+        "The original rotating-cube project rendered a limited scene. The level renderer required a scalable structure for storing, transforming, and drawing several models efficiently.",
+    },
+    {
+      title: "Transformation pipeline",
+      description:
+        "World, view, and projection matrices had to be combined correctly so imported objects appeared in the intended position and orientation in the rendered scene.",
+    },
+  ],
+
+  results: [
+    "Expanded a basic renderer into a reusable real-time level-loading system.",
+    "Successfully reconstructed Blender-authored scenes from exported transform data.",
+    "Integrated custom file parsing, mesh loading, model management, and matrix transformations.",
+    "Strengthened practical knowledge of graphics programming, file I/O, 3D mathematics, engine architecture, and real-time rendering workflows.",
+  ],
+
+  links: {
+    repository:
+      "https://github.com/Trebor511/LevelRenderer-CodeDemo",
+    video: null,
+    playableBuild: null,
+  },
+},
 
   {
     id: 4,

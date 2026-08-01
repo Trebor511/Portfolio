@@ -3,6 +3,7 @@ import ProjectGrid from "../components/ProjectGrid";
 import { projects } from "../data/projects";
 import Reveal from "../components/Reveal";
 import PageMetadata from "../components/PageMetadata";
+import { assetPath } from "../utils/assetPath";
 
 function HomePage() {
   const featuredProjects = projects.filter((project) => project.featured);
@@ -14,46 +15,67 @@ function HomePage() {
         description="Portfolio of Robert Poore, featuring Unreal Engine, C++, gameplay programming, tools, graphics, and software engineering projects."
       />
       <section className="hero">
-        <Reveal className="hero__content">
-          <div className="availability-badge">
-            <span className="availability-badge__indicator" aria-hidden="true" />
-            Open to gameplay and tools programming opportunities
-          </div>
+        <div className="hero__grid">
+          <Reveal className="hero__content">
+            <div className="availability-badge">
+              <span
+                className="availability-badge__indicator"
+                aria-hidden="true"
+              />
+              Open to gameplay and tools programming opportunities
+            </div>
 
-          <p className="hero__eyebrow">Gameplay Programmer</p>
+            <p className="hero__eyebrow">Gameplay Programmer</p>
 
-          <h1>
-            I build{" "}
-            <span className="gradient-text">modular gameplay systems</span>{" "}
-            and interactive experiences.
-          </h1>
+            <h1>
+              I build{" "}
+              <span className="gradient-text">
+                modular gameplay systems
+              </span>{" "}
+              and interactive experiences.
+            </h1>
 
-          <p className="hero__summary">
-            I am a gameplay programmer and software engineer focused on Unreal
-            Engine, C++, systems design, graphics programming, and development
-            tools.
-          </p>
+            <p className="hero__summary">
+              I am a gameplay programmer and software engineer focused on Unreal
+              Engine, C++, systems design, graphics programming, and development
+              tools.
+            </p>
 
-          <div className="hero__actions">
-            <Link className="button button--primary" to="/work">
-              View My Work
-            </Link>
+            <div className="hero__actions">
+              <Link className="button button--primary" to="/work">
+                View My Work
+              </Link>
 
-            <Link className="button button--secondary" to="/contact">
-              Contact Me
-            </Link>
+              <Link className="button button--secondary" to="/contact">
+                Contact Me
+              </Link>
 
-            <a
-              className="button button--secondary"
-              href="/resume/Robert-Poore-Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Résumé
-            </a>
+              <a
+                className="button button--secondary"
+                href={assetPath("resume/Robert-Poore-Resume.pdf")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Résumé
+              </a>
+            </div>
+          </Reveal>
 
-          </div>
-        </Reveal>
+          <Reveal className="hero__portrait" delay={140}>
+            <div className="hero__portrait-frame">
+              <img
+                src={assetPath("images/robert-poore-headshot.jpg")}
+                alt="Robert Poore, gameplay programmer and software engineer"
+              />
+            </div>
+
+            <div className="hero__portrait-caption">
+              <span>Unreal Engine</span>
+              <span>C++</span>
+              <span>Gameplay Systems</span>
+            </div>
+          </Reveal>
+        </div>
       </section>
 
       <section className="page-section">

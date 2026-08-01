@@ -262,8 +262,88 @@
   padding: 96px 0;
 }
 
+.hero__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  align-items: center;
+  gap: clamp(48px, 8vw, 96px);
+}
+
 .hero__content {
   max-width: 780px;
+}
+
+.hero__portrait {
+  position: relative;
+  width: min(100%, 390px);
+  justify-self: end;
+}
+
+.hero__portrait::before {
+  position: absolute;
+  inset: 8% -8% -6% 12%;
+  z-index: -1;
+  border-radius: 34px;
+  content: "";
+  background:
+    radial-gradient(
+      circle,
+      rgba(127, 176, 255, 0.3),
+      rgba(139, 108, 255, 0.12) 52%,
+      transparent 72%
+    );
+  filter: blur(24px);
+}
+
+.hero__portrait-frame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border: 1px solid rgba(159, 196, 255, 0.26);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.035);
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.38),
+    0 0 0 8px rgba(127, 176, 255, 0.025);
+}
+
+.hero__portrait-frame::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08),
+      transparent 38%
+    );
+}
+
+.hero__portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero__portrait-caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.hero__portrait-caption span {
+  padding: 7px 10px;
+  border: 1px solid rgba(127, 176, 255, 0.18);
+  border-radius: 999px;
+  color: #b9d2ff;
+  background: rgba(127, 176, 255, 0.06);
+  font-size: 0.78rem;
+  font-weight: 600;
 }
 
 .hero__eyebrow,
@@ -485,6 +565,29 @@
     min-height: auto;
     padding: 88px 0;
   }
+
+  .hero__grid {
+  grid-template-columns: 1fr;
+  gap: 52px;
+}
+
+.hero__portrait {
+  width: min(82%, 340px);
+  justify-self: center;
+  order: -1;
+}
+
+.hero__portrait-frame {
+  border-radius: 22px;
+}
+
+.hero__content {
+  text-align: left;
+}
+
+.hero__portrait-caption {
+  justify-content: center;
+}
 
   .page-section {
     padding: 88px 0;
