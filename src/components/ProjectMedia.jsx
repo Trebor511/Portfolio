@@ -1,8 +1,46 @@
-function ProjectMedia({ media, title }) {
+function ProjectMedia({
+  media,
+  title,
+  displayMode = "full",
+}) {
   if (!media) {
     return (
       <div className="project-card__media project-card__media--placeholder">
         <span>Project media coming soon</span>
+      </div>
+    );
+  }
+
+  const fallbackAlt =
+    media.alt || `${title} project media`;
+
+  if (displayMode === "card") {
+    if (media.poster) {
+      return (
+        <div className="project-card__media">
+          <img
+            className="project-card__image"
+            src={media.poster}
+            alt={fallbackAlt}
+            loading="lazy"
+            decoding="async"
+          />
+
+          {media.type === "video" && (
+            <div
+              className="project-card__play-indicator"
+              aria-hidden="true"
+            >
+              <span className="project-card__play-icon" />
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    return (
+      <div className="project-card__media project-card__media--placeholder">
+        <span>Project preview unavailable</span>
       </div>
     );
   }
@@ -14,7 +52,7 @@ function ProjectMedia({ media, title }) {
           className="project-card__video"
           src={media.src}
           poster={media.poster || undefined}
-          aria-label={media.alt || `${title} project video`}
+          aria-label={fallbackAlt}
           muted
           loop
           playsInline
@@ -33,8 +71,9 @@ function ProjectMedia({ media, title }) {
         <img
           className="project-card__image"
           src={media.src}
-          alt={media.alt || `${title} project screenshot`}
+          alt={fallbackAlt}
           loading="lazy"
+          decoding="async"
         />
       </div>
     );

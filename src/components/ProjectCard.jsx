@@ -4,7 +4,11 @@ import { Link } from "react-router";
 function ProjectCard({ project }) {
   return (
     <article className="project-card">
-      <ProjectMedia media={project.media} title={project.title} />
+      <ProjectMedia
+        media={project.media}
+        title={project.title}
+        displayMode="card"
+      />
 
       <div className="project-card__content">
         <div className="project-card__meta">

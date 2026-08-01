@@ -15,7 +15,7 @@ export const projects = [
     media: {
       type: "video",
       src: "/media/moms-kitchen/demo.mp4",
-      poster: null,
+      poster: "/media/moms-kitchen/poster.webp",
       alt: "Gameplay demonstration from Mom's Kitchen",
     },
 
@@ -66,7 +66,7 @@ export const projects = [
     media: {
       type: "video",
       src: "/media/pixelcution/demo.mp4",
-      poster: null,
+      poster: "/media/pixelcution/poster.webp",
       alt: "Gameplay demonstration from Pixelcution",
     },
     overview:
@@ -103,7 +103,7 @@ export const projects = [
     media: {
       type: "video",
       src: "/media/level-renderer/demo.mp4",
-      poster: null,
+      poster: "/media/level-renderer/poster.webp",
       alt: "Runtime rendering demonstration from Level Renderer",
     },
 
@@ -143,7 +143,7 @@ export const projects = [
     media: {
       type: "video",
       src: "/media/devyn-in-space/demo.mp4",
-      poster: null,
+      poster: "/media/devyn-in-space/poster.webp",
       alt: "Gameplay demonstration from Devyn in Space",
     },
 
@@ -202,7 +202,7 @@ export const projects = [
     media: {
       type: "video",
       src: "/media/conway/demo.mp4",
-      poster: null,
+      poster: "/media/conway/poster.webp",
       alt: "Conway's Game of Life application demonstration",
     },
 
@@ -260,7 +260,7 @@ export const projects = [
     media: {
       type: "video",
       src: "/media/rotating-cube/demo.mp4",
-      poster: null,
+      poster: "/media/rotating-cube/poster.webp",
       alt: "Rotating Cube graphics demonstration",
     },
 
@@ -318,7 +318,7 @@ export const projects = [
     media: {
       type: "video",
       src: "/media/concentrate/demo.mp4",
-      poster: null,
+       poster: "/media/concentrate/poster.webp",
       alt: "Gameplay demonstration from Concentrate!",
     },
 
