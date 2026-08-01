@@ -82,7 +82,7 @@ export const projects = [
   },
 
   overview:
-    "Pixelcution is a fast-paced top-down action shooter developed in Unreal Engine 4.27 by a five-person team, with me serving as lead developer. The game combines a dynamic weapon system, several enemy archetypes, procedurally generated dungeon rooms, and a roguelite-inspired relic progression system. As lead developer, I coordinated the technical direction, guided feature implementation, and contributed several of the project's central gameplay systems.",
+    "Pixelcution is a fast-paced first-person action shooter developed in Unreal Engine 4.27 by a five-person team, with me serving as lead developer. The game combines a dynamic weapon system, several enemy archetypes, procedurally generated dungeon rooms, and a roguelite-inspired relic progression system. As lead developer, I coordinated the technical direction, guided feature implementation, and contributed several of the project's central gameplay systems.",
 
   responsibilities: [
     "Served as lead developer for a five-person development team.",
