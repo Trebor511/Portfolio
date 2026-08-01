@@ -3,6 +3,7 @@ import ProjectFilters from "../components/ProjectFilters";
 import ProjectGrid from "../components/ProjectGrid";
 import { projects } from "../data/projects";
 import Reveal from "../components/Reveal";
+import PageMetadata from "../components/PageMetadata";
 
 function WorkPage() {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -15,35 +16,43 @@ function WorkPage() {
       );
 
   return (
-    <section className="standard-page">
-      <Reveal>
-        <header className="page-header">
-          <p className="section-heading__eyebrow">Portfolio</p>
+    <>
+      <PageMetadata
+        title="Projects | Robert Poore"
+        description="Explore gameplay, systems, graphics, tools, and software-development projects created by Robert Poore."
+      />
 
-          <h1>My Work</h1>
+      <section className="standard-page"></section>
+      <section className="standard-page">
+        <Reveal>
+          <header className="page-header">
+            <p className="section-heading__eyebrow">Portfolio</p>
 
-          <p>
-            Gameplay, systems, tools, software, and graphics programming
-            projects created through independent development, academic work, and
-            team collaboration.
-          </p>
-        </header>
-      </Reveal>
+            <h1>My Work</h1>
 
-      <Reveal delay={100}>
-        <ProjectFilters
-          activeFilter={activeFilter}
-          onFilterChange={setActiveFilter}
-        />
-      </Reveal>
+            <p>
+              Gameplay, systems, tools, software, and graphics programming
+              projects created through independent development, academic work, and
+              team collaboration.
+            </p>
+          </header>
+        </Reveal>
 
-      <p className="project-count" aria-live="polite">
-        Showing {visibleProjects.length}{" "}
-        {visibleProjects.length === 1 ? "project" : "projects"}
-      </p>
+        <Reveal delay={100}>
+          <ProjectFilters
+            activeFilter={activeFilter}
+            onFilterChange={setActiveFilter}
+          />
+        </Reveal>
 
-      <ProjectGrid projects={visibleProjects} />
-    </section>
+        <p className="project-count" aria-live="polite">
+          Showing {visibleProjects.length}{" "}
+          {visibleProjects.length === 1 ? "project" : "projects"}
+        </p>
+
+        <ProjectGrid projects={visibleProjects} />
+      </section>
+    </>
   );
 }
 

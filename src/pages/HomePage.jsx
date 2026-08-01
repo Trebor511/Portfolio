@@ -2,12 +2,17 @@ import { Link } from "react-router";
 import ProjectGrid from "../components/ProjectGrid";
 import { projects } from "../data/projects";
 import Reveal from "../components/Reveal";
+import PageMetadata from "../components/PageMetadata";
 
 function HomePage() {
   const featuredProjects = projects.filter((project) => project.featured);
 
   return (
     <>
+      <PageMetadata
+        title="Robert Poore | Gameplay Programmer"
+        description="Portfolio of Robert Poore, featuring Unreal Engine, C++, gameplay programming, tools, graphics, and software engineering projects."
+      />
       <section className="hero">
         <Reveal className="hero__content">
           <div className="availability-badge">
