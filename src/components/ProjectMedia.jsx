@@ -51,15 +51,18 @@ function ProjectMedia({
       <div className="project-card__media">
         <video
           className="project-card__video"
-          src={resolvedSource}
           poster={resolvedPoster}
           aria-label={fallbackAlt}
           muted
-          loop
           playsInline
           preload="metadata"
           controls
         >
+          <source
+            src={resolvedSource}
+            type="video/mp4"
+          />
+
           Your browser does not support embedded video.
         </video>
       </div>
