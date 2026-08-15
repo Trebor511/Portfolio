@@ -14,7 +14,7 @@ function AboutPage() {
           <header className="page-header">
             <p className="section-heading__eyebrow">About</p>
 
-            <h1>Gameplay programmer focused on reusable systems.</h1>
+            <h1>Gameplay Programmer with a love for learning.</h1>
 
             <p>
               I am a game developer and software engineer specializing in
@@ -42,6 +42,28 @@ function AboutPage() {
             </p>
           </section>
         </Reveal>
+
+        <section className="about-section">
+          <h2>Outside of development</h2>
+
+          <p>
+            Outside of game development, I spend a lot of my free time playing games
+            and paying attention to the systems and design choices that make them
+            memorable. Some of my favorite games include the Kingdom Hearts series,  Final Fantasy, and Legend of Zelda.
+            Not only do I enjoy a good RPG, but I also enjoy a good challange, from combat to puzzles. I have also been 
+            known to get locked into a 2 week binge of a cozy game like Stardew Valley or Minecraft!
+            
+          </p>
+
+          <p>
+            I also enjoy getting away from the screen when I can. Lately,
+            I’ve been learning to cook more dishes for myself, getting into fishing at the local pond
+             (I've only caught a few bluegills so far), and riding my bike
+            around town to get some good exercise while I explore the area. 
+            I like having hobbies that give me an opportunity to expand my skills and stretch my brain
+            which is a great way for me to reset away from development.
+          </p>
+        </section>
 
         <Reveal delay={140}>
           <section className="content-section">

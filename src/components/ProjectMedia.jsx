@@ -35,15 +35,6 @@ function ProjectMedia({
             loading="lazy"
             decoding="async"
           />
-
-          {media.type === "video" && (
-            <div
-              className="project-card__play-indicator"
-              aria-hidden="true"
-            >
-              <span className="project-card__play-icon" />
-            </div>
-          )}
         </div>
       );
     }

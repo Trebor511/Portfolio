@@ -127,6 +127,38 @@
   text-transform: uppercase;
 }
 
+.contact-card__icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 22px;
+  border: 1px solid rgba(127, 176, 255, 0.22);
+  border-radius: 14px;
+  color: #9fc4ff;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(127, 176, 255, 0.12),
+      rgba(139, 108, 255, 0.06)
+    );
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.contact-card__icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.contact-card:hover .contact-card__icon {
+  border-color: rgba(127, 176, 255, 0.42);
+  box-shadow: 0 12px 32px rgba(61, 116, 210, 0.14);
+  transform: translateY(-3px);
+}
+
 .contact-card .button {
   margin-top: auto;
   transform: translateY(24px);

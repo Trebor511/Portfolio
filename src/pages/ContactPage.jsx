@@ -1,6 +1,9 @@
 import Reveal from "../components/Reveal";
 import { profile } from "../data/profile";
 import PageMetadata from "../components/PageMetadata";
+import EmailIcon from "../components/icons/EmailIcon";
+import GitHubIcon from "../components/icons/GitHubIcon";
+import LinkedInIcon from "../components/icons/LinkedInIcon";
 
 function ContactPage() {
   return (
@@ -28,6 +31,10 @@ function ContactPage() {
         <div className="contact-grid">
           <Reveal delay={80}>
             <article className="contact-card">
+              <div className="contact-card__icon">
+                <EmailIcon />
+              </div>
+
               <p className="contact-card__label">Email</p>
               <h2>Send me a message</h2>
 
@@ -47,6 +54,10 @@ function ContactPage() {
 
           <Reveal delay={160}>
             <article className="contact-card">
+              <div className="contact-card__icon">
+                <GitHubIcon />
+              </div>
+
               <p className="contact-card__label">GitHub</p>
               <h2>Review my code</h2>
 
@@ -68,6 +79,10 @@ function ContactPage() {
 
           <Reveal delay={240}>
             <article className="contact-card">
+              <div className="contact-card__icon">
+                <LinkedInIcon />
+              </div>
+
               <p className="contact-card__label">LinkedIn</p>
               <h2>Connect professionally</h2>
 

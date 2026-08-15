@@ -4,11 +4,17 @@ import { Link } from "react-router";
 function ProjectCard({ project }) {
   return (
     <article className="project-card">
-      <ProjectMedia
-        media={project.media}
-        title={project.title}
-        displayMode="card"
-      />
+      <Link
+        className="project-card__media-link"
+        to={`/projects/${project.slug}`}
+        aria-label={`View ${project.title} case study`}
+      >
+        <ProjectMedia
+          media={project.media}
+          title={project.title}
+          displayMode="card"
+        />
+      </Link>
 
       <div className="project-card__content">
         <div className="project-card__meta">
@@ -16,7 +22,12 @@ function ProjectCard({ project }) {
           <span>{project.status}</span>
         </div>
 
-        <h3>{project.title}</h3>
+        <h3><Link
+          className="project-card__title-link"
+          to={`/projects/${project.slug}`}
+        >
+          {project.title}
+        </Link></h3>
 
         <p className="project-card__summary">{project.summary}</p>
 

@@ -56,7 +56,7 @@ function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View Résumé
+                View Resume
               </a>
             </div>
           </Reveal>
@@ -105,15 +105,14 @@ function HomePage() {
         <Reveal>
           <div className="section-heading">
             <p className="section-heading__eyebrow">About Me</p>
-            <h2>Gameplay-focused development</h2>
+            <h2>A little bit of Everything</h2>
 
             <p>
-              I build reusable gameplay systems and technical foundations with a
-              focus on C++, Unreal Engine, and maintainable architecture.
+              Outside of work, I like to try and experience new things or learn new skills. Whether it's a new game, or a new skill like cooking and fishing, I am always up for the challenge. A little bit of everything makes life fun!
             </p>
 
             <Link className="text-link" to="/about">
-              More about my experience
+              More about me
               <span aria-hidden="true"> →</span>
             </Link>
           </div>

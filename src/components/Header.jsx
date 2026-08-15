@@ -121,7 +121,7 @@ function Header() {
             rel="noopener noreferrer"
             onClick={closeMenu}
           >
-            Résumé
+            Resume
           </a>
         </nav>
       </div>
