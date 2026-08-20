@@ -8,5 +8,5 @@ export const profile = {
 
   linkedin: "https://www.linkedin.com/in/robertjpoore/",
 
-  resume: "resume/Robert-Poore-Resume.pdf",
+  resume: "resume/Robert_Poore_Resume.pdf",
 };

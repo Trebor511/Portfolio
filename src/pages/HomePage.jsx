@@ -4,6 +4,7 @@ import { projects } from "../data/projects";
 import Reveal from "../components/Reveal";
 import PageMetadata from "../components/PageMetadata";
 import { assetPath } from "../utils/assetPath";
+import { profile } from "../data/profile";
 
 function HomePage() {
   const featuredProjects = projects.filter((project) => project.featured);
@@ -52,12 +53,13 @@ function HomePage() {
 
               <a
                 className="button button--secondary"
-                href={assetPath("resume/Robert-Poore-Resume.pdf")}
+                href={assetPath(profile.resume)}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 View Resume
               </a>
+
             </div>
           </Reveal>
 
@@ -75,8 +77,8 @@ function HomePage() {
               <span>Gameplay Systems</span>
             </div>
           </Reveal>
-        </div>
-      </section>
+        </div >
+      </section >
 
       <section className="page-section">
         <Reveal>
